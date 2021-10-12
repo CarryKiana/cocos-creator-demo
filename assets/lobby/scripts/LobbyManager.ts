@@ -1,5 +1,5 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, Quat, tween, EventTouch,
-    systemEvent, SystemEvent, EventMouse, CameraComponent, geometry, PhysicsSystem, assetManager, JsonAsset, ModelComponent, MeshRenderer, BoxCollider, Texture2D, js, director, Vec2, game, find, log, view } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, Quat, tween, EventTouch, Touch,
+    systemEvent, SystemEvent, EventMouse, CameraComponent, geometry, PhysicsSystem, assetManager, JsonAsset, MeshRenderer, BoxCollider, Texture2D, js, director, Vec2, game, find, log } from 'cc';
 const { ccclass, property } = _decorator;
 /**
  * Predefined variables
@@ -12,7 +12,7 @@ const { ccclass, property } = _decorator;
  * ManualUrl = https://docs.cocos.com/creator/3.3/manual/zh/
  *
  */
-const { ray } = geometry
+const { Ray } = geometry
 const tempQuat_a: Quat = new Quat()
 
 interface ICoverData {
@@ -44,10 +44,13 @@ export class Lobby extends Component {
 
     start () {
         this.loadCovers()
+        // 鼠标监听
+        systemEvent.on(SystemEvent.EventType.MOUSE_UP, this.onMouseUp, this)
+        // 触摸监听
+        systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onTouchEnd, this)
     }
     // 加载数据文件
     loadCovers () {
-        console.log(assetManager)
         assetManager.resources.load('games', JsonAsset, (err, jsonData) => {
             if(jsonData && Array.isArray(jsonData['json'])) {
                 this.generateCovers(jsonData['json'])
@@ -58,20 +61,15 @@ export class Lobby extends Component {
     generateCovers(coverData: ICoverData[]) {
         this._coverData = coverData
         const coverNum = Math.max(coverData.length, 5)
-        console.log(this.node)
         for (let i = 0; i < coverNum; i++) {
             const coverNode:Node = instantiate(this.coverPrfb)
             coverNode.name = '' + i
             // coverNode.parent = this.node
             this.node.addChild(coverNode)
-            console.log(coverNode)
             if (i < coverData.length) {
                 const data = coverData[i]
 
                 const modelComp = coverNode.getComponent(MeshRenderer)
-                console.log(modelComp)
-                console.log(111)
-                console.log(this)
                 const mat = modelComp.material
                 assetManager.resources.load(data.coverImgUrl,Texture2D, (err, texture: Texture2D) => {
                     if (err) {
@@ -107,7 +105,6 @@ export class Lobby extends Component {
                 const sign = Math.sign(delta)
                 let posX = delta * diff
                 let angle = -60 * sign
-                log(`第${i}个面板的x位置是${posX}`)
                 pos.set(posX * 300, 0, 0)
                 Quat.fromAxisAngle(rot, Vec3.UNIT_Y, angle/180 * Math.PI)
             }
@@ -135,6 +132,26 @@ export class Lobby extends Component {
         if (this._curIndex - 1 >= 0) {
             this.tweenToIndex(this._curIndex - 1)
         }
+    }
+    // 碰撞检测
+    onClickPos (mousePos: Vec2) {
+        const outRay = new Ray();
+        log('碰撞检测')
+    }
+    // 鼠标抬起事件监听
+    onMouseUp (event: EventMouse) {
+        this.onClickPos(event.getLocation())
+    }
+    // 触摸结束事件监听
+    onTouchEnd (touch: Touch, event: EventTouch) {
+        this.onClickPos(event.getLocation())
+    }
+
+    onDestroy () {
+        // 解除鼠标监听
+        systemEvent.off(SystemEvent.EventType.MOUSE_UP, this.onMouseUp, this)
+        // 解除触摸监听
+        systemEvent.off(SystemEvent.EventType.TOUCH_END, this.onTouchEnd, this)
     }
     // update (deltaTime: number) {
     //     // [4]
