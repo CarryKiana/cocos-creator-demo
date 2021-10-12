@@ -135,7 +135,23 @@ export class Lobby extends Component {
     }
     // 碰撞检测
     onClickPos (mousePos: Vec2) {
-        const outRay = new Ray();
+        const outRay = new Ray()
+        this.mainCamera.screenPointToRay(mousePos.x, mousePos.y, outRay)
+        PhysicsSystem.instance.raycastClosest(outRay)
+        if (PhysicsSystem.instance.raycastClosestResult.collider &&
+            PhysicsSystem.instance.raycastClosestResult.collider.node) {
+                const node = PhysicsSystem.instance.raycastClosestResult.collider.node
+                const index = Number.parseInt(node.name)
+                if (index < this._coverData.length) {
+                    if (this._isLoading) {
+                        return
+                    }
+                    this._isLoading = true
+                    const sceneUrl = this._coverData[index].sceneUrl
+                    log(sceneUrl)
+                    this._isLoading = false
+                }
+            }
         log('碰撞检测')
     }
     // 鼠标抬起事件监听
