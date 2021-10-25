@@ -43,6 +43,9 @@ export class Lobby extends Component {
 
 
     start () {
+        const persistCanvas = find('PersistCanvas')
+        persistCanvas.active = false
+
         this.loadCovers()
         // 鼠标监听
         systemEvent.on(SystemEvent.EventType.MOUSE_UP, this.onMouseUp, this)
@@ -148,8 +151,13 @@ export class Lobby extends Component {
                     }
                     this._isLoading = true
                     const sceneUrl = this._coverData[index].sceneUrl
-                    log(sceneUrl)
-                    this._isLoading = false
+                    if (director.loadScene(sceneUrl)) {
+                        const persistCanvas = find('PersistCanvas')
+                        persistCanvas.active = true
+                        this._isLoading = false
+                    } else {
+                        this._isLoading = false
+                    }
                 }
             }
         log('碰撞检测')
