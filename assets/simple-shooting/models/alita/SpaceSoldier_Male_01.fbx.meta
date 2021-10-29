@@ -1,0 +1,975 @@
+{
+  "ver": "2.1.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-4.cconb",
+    "__original-animation-1.cconb",
+    "__original-animation-2.cconb",
+    "__original-animation-3.cconb",
+    "__original-animation-6.cconb",
+    "__original-animation-5.cconb",
+    "__original-animation-7.cconb",
+    "__original-animation-8.cconb",
+    "__original-animation-9.cconb",
+    "__original-animation-10.cconb",
+    "__original-animation-11.cconb",
+    "__original-animation-12.cconb",
+    "__original-animation-13.cconb",
+    "__original-animation-14.cconb",
+    "__original-animation-15.cconb",
+    "__original-animation-17.cconb",
+    "__original-animation-16.cconb",
+    "__original-animation-18.cconb",
+    "__original-animation-19.cconb",
+    "__original-animation-20.cconb"
+  ],
+  "subMetas": {
+    "22072": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@22072",
+      "displayName": "",
+      "id": "22072",
+      "name": "Ar|JumpGun.animation",
+      "userData": {
+        "gltfIndex": 12,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.2083333283662796
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "30732": {
+      "importer": "gltf-skeleton",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@30732",
+      "displayName": "",
+      "id": "30732",
+      "name": "UnnamedSkeleton-0.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 45
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "70593": {
+      "importer": "gltf-material",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@70593",
+      "displayName": "",
+      "id": "70593",
+      "name": "SpaceSoldier.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "82751": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@82751",
+      "displayName": "",
+      "id": "82751",
+      "name": "Ar|Hit.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.4166666567325592
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "41ac8": {
+      "importer": "gltf-mesh",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@41ac8",
+      "displayName": "",
+      "id": "41ac8",
+      "name": "Cube.001.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e5760": {
+      "importer": "gltf-mesh",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@e5760",
+      "displayName": "",
+      "id": "e5760",
+      "name": "Gun.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8caee": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@8caee",
+      "displayName": "",
+      "id": "8caee",
+      "name": "Ar|0StartPose.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "d0e74": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@d0e74",
+      "displayName": "",
+      "id": "d0e74",
+      "name": "Ar|0StartPose.001.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "5c527": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@5c527",
+      "displayName": "",
+      "id": "5c527",
+      "name": "Ar|Death.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.125
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "8c7ae": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@8c7ae",
+      "displayName": "",
+      "id": "8c7ae",
+      "name": "Ar|Death.1.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "422e3": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@422e3",
+      "displayName": "",
+      "id": "422e3",
+      "name": "Ar|HitGun.animation",
+      "userData": {
+        "gltfIndex": 5,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.4166666567325592
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "cf4e1": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@cf4e1",
+      "displayName": "",
+      "id": "cf4e1",
+      "name": "Ar|Idle.animation",
+      "userData": {
+        "gltfIndex": 6,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2083333730697632
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "6afda": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@6afda",
+      "displayName": "",
+      "id": "6afda",
+      "name": "Ar|Idle.1.animation",
+      "userData": {
+        "gltfIndex": 7,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2083333730697632
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "268b4": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@268b4",
+      "displayName": "",
+      "id": "268b4",
+      "name": "Ar|Idle.2.animation",
+      "userData": {
+        "gltfIndex": 8,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2083333730697632
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "7c65c": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@7c65c",
+      "displayName": "",
+      "id": "7c65c",
+      "name": "Ar|Idle.3.animation",
+      "userData": {
+        "gltfIndex": 9,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2083333730697632
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "6c367": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@6c367",
+      "displayName": "",
+      "id": "6c367",
+      "name": "Ar|Idle.4.animation",
+      "userData": {
+        "gltfIndex": 10,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2083333730697632
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "e446d": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@e446d",
+      "displayName": "",
+      "id": "e446d",
+      "name": "Ar|Jump.animation",
+      "userData": {
+        "gltfIndex": 11,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.2083333283662796
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "9208d": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@9208d",
+      "displayName": "",
+      "id": "9208d",
+      "name": "Ar|Landing.animation",
+      "userData": {
+        "gltfIndex": 13,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.2083333283662796
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "d2eda": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@d2eda",
+      "displayName": "",
+      "id": "d2eda",
+      "name": "Ar|LandingGun.animation",
+      "userData": {
+        "gltfIndex": 14,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.2083333283662796
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "4f782": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@4f782",
+      "displayName": "",
+      "id": "4f782",
+      "name": "Ar|Run.animation",
+      "userData": {
+        "gltfIndex": 15,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7916666865348816
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "50ac1": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@50ac1",
+      "displayName": "",
+      "id": "50ac1",
+      "name": "Ar|RunGun.animation",
+      "userData": {
+        "gltfIndex": 16,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7916666865348816
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "4a2a0": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@4a2a0",
+      "displayName": "",
+      "id": "4a2a0",
+      "name": "Ar|ShootTorsoArmsPistol.animation",
+      "userData": {
+        "gltfIndex": 17,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.2083333283662796
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "acc0d": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@acc0d",
+      "displayName": "",
+      "id": "acc0d",
+      "name": "Ar|ShootTorsoArmsRifle.animation",
+      "userData": {
+        "gltfIndex": 18,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.2083333283662796
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "f6ee0": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@f6ee0",
+      "displayName": "",
+      "id": "f6ee0",
+      "name": "Ar|Walk.animation",
+      "userData": {
+        "gltfIndex": 19,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.4166666269302368
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "83c12": {
+      "importer": "gltf-animation",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@83c12",
+      "displayName": "",
+      "id": "83c12",
+      "name": "Ar|WalkGun.animation",
+      "userData": {
+        "gltfIndex": 20,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.375
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "f1394": {
+      "importer": "gltf-skeleton",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@f1394",
+      "displayName": "",
+      "id": "f1394",
+      "name": "UnnamedSkeleton-1.skeleton",
+      "userData": {
+        "gltfIndex": 1,
+        "jointsLength": 45
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "933e8": {
+      "importer": "gltf-embeded-image",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@933e8",
+      "displayName": "",
+      "id": "933e8",
+      "name": "Texture.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "eb3be": {
+      "importer": "texture",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@eb3be",
+      "displayName": "",
+      "id": "eb3be",
+      "name": "Texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@933e8"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d56ba": {
+      "importer": "gltf-material",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@d56ba",
+      "displayName": "",
+      "id": "d56ba",
+      "name": "LaserRifle.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f938e": {
+      "importer": "gltf-scene",
+      "uuid": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@f938e",
+      "displayName": "",
+      "id": "f938e",
+      "name": "SpaceSoldier_Male_01.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Texture",
+        "uri": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@933e8"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "Ar|0StartPose",
+        "duration": 0,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|0StartPose",
+            "from": 0,
+            "to": 0,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|0StartPose.001",
+        "duration": 0,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|0StartPose.001",
+            "from": 0,
+            "to": 0,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Death",
+        "duration": 1.125,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Death",
+            "from": 0,
+            "to": 1.125,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Death.1",
+        "duration": 1,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Death.1",
+            "from": 0,
+            "to": 1,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Hit",
+        "duration": 0.4166666567325592,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Hit",
+            "from": 0,
+            "to": 0.4166666567325592,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|HitGun",
+        "duration": 0.4166666567325592,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|HitGun",
+            "from": 0,
+            "to": 0.4166666567325592,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Idle",
+        "duration": 1.2083333730697632,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Idle",
+            "from": 0,
+            "to": 1.2083333730697632,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Idle.1",
+        "duration": 1.2083333730697632,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Idle.1",
+            "from": 0,
+            "to": 1.2083333730697632,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Idle.2",
+        "duration": 1.2083333730697632,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Idle.2",
+            "from": 0,
+            "to": 1.2083333730697632,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Idle.3",
+        "duration": 1.2083333730697632,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Idle.3",
+            "from": 0,
+            "to": 1.2083333730697632,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Idle.4",
+        "duration": 1.2083333730697632,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Idle.4",
+            "from": 0,
+            "to": 1.2083333730697632,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Jump",
+        "duration": 0.2083333283662796,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Jump",
+            "from": 0,
+            "to": 0.2083333283662796,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|JumpGun",
+        "duration": 0.2083333283662796,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|JumpGun",
+            "from": 0,
+            "to": 0.2083333283662796,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Landing",
+        "duration": 0.2083333283662796,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Landing",
+            "from": 0,
+            "to": 0.2083333283662796,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|LandingGun",
+        "duration": 0.2083333283662796,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|LandingGun",
+            "from": 0,
+            "to": 0.2083333283662796,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Run",
+        "duration": 0.7916666865348816,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Run",
+            "from": 0,
+            "to": 0.7916666865348816,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|RunGun",
+        "duration": 0.7916666865348816,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|RunGun",
+            "from": 0,
+            "to": 0.7916666865348816,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|ShootTorsoArmsPistol",
+        "duration": 0.2083333283662796,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|ShootTorsoArmsPistol",
+            "from": 0,
+            "to": 0.2083333283662796,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|ShootTorsoArmsRifle",
+        "duration": 0.2083333283662796,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|ShootTorsoArmsRifle",
+            "from": 0,
+            "to": 0.2083333283662796,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|Walk",
+        "duration": 1.4166666269302368,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|Walk",
+            "from": 0,
+            "to": 1.4166666269302368,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Ar|WalkGun",
+        "duration": 1.375,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ar|WalkGun",
+            "from": 0,
+            "to": 1.375,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "829927fb-b5e5-4737-a5ab-8f9e39a83df7@f938e",
+    "assetFinder": {
+      "meshes": [
+        "829927fb-b5e5-4737-a5ab-8f9e39a83df7@41ac8",
+        "829927fb-b5e5-4737-a5ab-8f9e39a83df7@e5760"
+      ],
+      "skeletons": [
+        "829927fb-b5e5-4737-a5ab-8f9e39a83df7@30732",
+        "829927fb-b5e5-4737-a5ab-8f9e39a83df7@f1394"
+      ],
+      "textures": [
+        "829927fb-b5e5-4737-a5ab-8f9e39a83df7@eb3be"
+      ],
+      "materials": [
+        "829927fb-b5e5-4737-a5ab-8f9e39a83df7@70593",
+        "829927fb-b5e5-4737-a5ab-8f9e39a83df7@d56ba"
+      ],
+      "scenes": [
+        "829927fb-b5e5-4737-a5ab-8f9e39a83df7@f938e"
+      ]
+    }
+  }
+}
