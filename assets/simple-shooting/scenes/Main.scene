@@ -3872,7 +3872,7 @@
   },
   {
     "__type__": "cc.ParticleSystemRenderer",
-    "_renderMode": 0,
+    "_renderMode": 1,
     "_velocityScale": 1,
     "_lengthScale": 1,
     "_mesh": null,
