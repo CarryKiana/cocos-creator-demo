@@ -4232,9 +4232,9 @@
     "_lrot": {
       "__type__": "cc.Quat",
       "x": 0,
-      "y": 0,
+      "y": 1,
       "z": 0,
-      "w": 1
+      "w": 6.123233995736766e-17
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -4246,7 +4246,7 @@
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 180,
       "z": 0
     },
     "_id": "8bZ/5xHEZFxasPElODpthg"
@@ -4312,7 +4312,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 1,
       "z": 0.72
     },
     "_lrot": {
@@ -4612,7 +4612,7 @@
     "_id": "8cW74Vb3ZE+Z0ZuQN/FHT/"
   },
   {
-    "__type__": "47ec7rctLdOg7u3jbnMH5gT",
+    "__type__": "5c1ebP9DQ9NapZmLDevtPhQ",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -4620,7 +4620,27 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_id": "15C2/ukWNLC6fDs96LxpL1"
+    "moveSpeed": 3,
+    "BulletPrefab": {
+      "__uuid__": "81a730bc-9a88-4bcf-8a2b-aa04853d7ed1",
+      "__expectedType__": "cc.Prefab"
+    },
+    "grenatePrfb": {
+      "__uuid__": "e00f18dc-8ec2-4ce1-b70b-2bf530a9771b",
+      "__expectedType__": "cc.Prefab"
+    },
+    "firePoint": {
+      "__id__": 165
+    },
+    "throwPoint": {
+      "__id__": 166
+    },
+    "verticalViewNode": {
+      "__id__": 161
+    },
+    "viewUpAngle": 60,
+    "viewDownAngle": -60,
+    "_id": "ebxVH4lFZOGYLQcHTxtvrm"
   },
   {
     "__type__": "cc.Node",
