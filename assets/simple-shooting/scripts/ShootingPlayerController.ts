@@ -275,7 +275,6 @@ export class ShootingPlayerController extends Component {
     }
 
     onAnimationEnd(type, state) {
-        console.log(state.name)
         if (state.name === this._animStateToNameMap[PlayerAnimState.Shooting]) {
             this.changeToAnimState(PlayerAnimState.Idle)
         }
