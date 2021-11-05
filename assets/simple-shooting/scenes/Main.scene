@@ -31,6 +31,9 @@
       },
       {
         "__id__": 180
+      },
+      {
+        "__id__": 188
       }
     ],
     "_active": true,
@@ -38,7 +41,7 @@
     "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 188
+      "__id__": 190
     },
     "_id": "23f5a685-d512-4fba-811d-52e216d3c0f4"
   },
@@ -4724,18 +4727,77 @@
     }
   },
   {
+    "__type__": "cc.Node",
+    "_name": "GameManager",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 189
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "99SBjKGNREFZYCvqffI4sy"
+  },
+  {
+    "__type__": "47ec7rctLdOg7u3jbnMH5gT",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 188
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "boxPrfb": {
+      "__uuid__": "b94a1747-538a-4301-a73f-cc7c43ec9587",
+      "__expectedType__": "cc.Prefab"
+    },
+    "bottomBoxNum": 10,
+    "_id": "57IRXra4xICab6MqFU6Ji6"
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 189
-    },
-    "shadows": {
-      "__id__": 190
-    },
-    "_skybox": {
       "__id__": 191
     },
-    "fog": {
+    "shadows": {
       "__id__": 192
+    },
+    "_skybox": {
+      "__id__": 193
+    },
+    "fog": {
+      "__id__": 194
     }
   },
   {

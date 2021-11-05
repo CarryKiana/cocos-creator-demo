@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Prefab, instantiate, Node, Vec3, CCInteger } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -23,8 +23,27 @@ export class ShootingGameManager extends Component {
     // @property
     // serializableDummy = 0;
 
+    @property({ type: Prefab })
+    public boxPrfb: Prefab = null;
+    @property({ type: CCInteger })
+    public bottomBoxNum: number = 5;
+
     start () {
-        // [3]
+        this.generateBoxes();
+    }
+
+    generateBoxes () {
+        const bottomBoxNum = this.bottomBoxNum;
+        const boxSize = 1;
+        for (let i = 0; i < bottomBoxNum; i++) {
+            for (let j = 0; j < (bottomBoxNum - i); j++) {
+                const boxNode: Node = instantiate(this.boxPrfb);
+                const posX = i * boxSize / 2 + j;
+                const posY = i + 0.1;
+                boxNode.parent = this.node;
+                boxNode.setWorldPosition(new Vec3(posX, posY, -10));
+            }
+        }
     }
 
     // update (deltaTime: number) {
