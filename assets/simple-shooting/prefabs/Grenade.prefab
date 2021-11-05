@@ -190,7 +190,10 @@
     "__prefab": {
       "__id__": 10
     },
-    "explosionPrfb": null,
+    "explosionPrfb": {
+      "__uuid__": "4f038d5d-bcc2-43c1-814c-86f00164b094",
+      "__expectedType__": "cc.Prefab"
+    },
     "_id": ""
   },
   {

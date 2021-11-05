@@ -22,11 +22,11 @@
         "__id__": 2
       },
       {
-        "__id__": 59
+        "__id__": 60
       }
     ],
     "_prefab": {
-      "__id__": 60
+      "__id__": 62
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -57,16 +57,18 @@
     "_id": ""
   },
   {
-    "__type__": "cc.ParticleSystemComponent",
+    "__type__": "cc.ParticleSystem",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
+    "__prefab": null,
     "_materials": [
       {
-        "__uuid__": "c01b9002-276f-41aa-ae5e-c23fbdf60226"
+        "__uuid__": "0608276c-1a94-47b7-9808-b3f3df47c555",
+        "__expectedType__": "cc.Material"
       }
     ],
     "_visFlags": 0,
@@ -127,35 +129,35 @@
         "__id__": 16
       }
     ],
-    "colorOverLifetimeModule": {
+    "_colorOverLifetimeModule": {
       "__id__": 18
     },
-    "shapeModule": {
+    "_shapeModule": {
       "__id__": 25
     },
-    "sizeOvertimeModule": {
+    "_sizeOvertimeModule": {
       "__id__": 27
     },
-    "velocityOvertimeModule": {
-      "__id__": 32
+    "_velocityOvertimeModule": {
+      "__id__": 33
     },
-    "forceOvertimeModule": {
-      "__id__": 37
+    "_forceOvertimeModule": {
+      "__id__": 38
     },
-    "limitVelocityOvertimeModule": {
-      "__id__": 41
+    "_limitVelocityOvertimeModule": {
+      "__id__": 42
     },
-    "rotationOvertimeModule": {
-      "__id__": 46
+    "_rotationOvertimeModule": {
+      "__id__": 47
     },
-    "textureAnimationModule": {
-      "__id__": 50
+    "_textureAnimationModule": {
+      "__id__": 51
     },
-    "trailModule": {
-      "__id__": 53
+    "_trailModule": {
+      "__id__": 54
     },
     "renderer": {
-      "__id__": 58
+      "__id__": 59
     },
     "enableCulling": false,
     "_prewarm": false,
@@ -215,7 +217,7 @@
     "__type__": "cc.CurveRange",
     "mode": 3,
     "constantMin": 0,
-    "constantMax": 6.283185307179586,
+    "constantMax": 3.141592653589793,
     "multiplier": 1
   },
   {
@@ -305,9 +307,9 @@
       "r": 255,
       "g": 163,
       "b": 0,
-      "a": 1
+      "a": 255
     },
-    "time": 0
+    "time": 0.006696428571428571
   },
   {
     "__type__": "cc.ColorKey",
@@ -316,19 +318,19 @@
       "r": 255,
       "g": 255,
       "b": 255,
-      "a": 1
+      "a": 255
     },
-    "time": 0.7232142857142857
+    "time": 0.734375
   },
   {
     "__type__": "cc.AlphaKey",
     "alpha": 255,
-    "time": 0
+    "time": 0.006696428571428571
   },
   {
     "__type__": "cc.AlphaKey",
     "alpha": 0,
-    "time": 0.9888392857142857
+    "time": 0.9910714285714286
   },
   {
     "__type__": "cc.ShapeModule",
@@ -378,7 +380,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 1,
+    "constant": 0,
     "multiplier": 1
   },
   {
@@ -389,47 +391,67 @@
       "__id__": 28
     },
     "x": {
-      "__id__": 29
-    },
-    "y": {
       "__id__": 30
     },
-    "z": {
+    "y": {
       "__id__": 31
+    },
+    "z": {
+      "__id__": 32
     }
   },
   {
     "__type__": "cc.CurveRange",
     "mode": 1,
-    "curve": {
-      "__type__": "cc.AnimationCurve",
-      "preWrapMode": 2,
-      "postWrapMode": 2,
-      "keyFrames": [
-        {
-          "__type__": "cc.Keyframe",
-          "time": 0.01,
-          "value": 0.31,
-          "inTangent": 0,
-          "outTangent": 0
-        },
-        {
-          "__type__": "cc.Keyframe",
-          "time": 0.34,
-          "value": 0.92,
-          "inTangent": 1.02,
-          "outTangent": 1.02
-        },
-        {
-          "__type__": "cc.Keyframe",
-          "time": 1,
-          "value": 0.82,
-          "inTangent": 0,
-          "outTangent": 0
-        }
-      ]
+    "spline": {
+      "__id__": 29
     },
     "multiplier": 1
+  },
+  {
+    "__type__": "cc.RealCurve",
+    "_times": [
+      0,
+      0.3435897435897436,
+      1
+    ],
+    "_values": [
+      {
+        "__type__": "cc.RealKeyframeValue",
+        "interpolationMode": 2,
+        "tangentWeightMode": 0,
+        "value": 0,
+        "rightTangent": 5.777777777777777,
+        "rightTangentWeight": 1,
+        "leftTangent": 5.777777777777777,
+        "leftTangentWeight": 1,
+        "easingMethod": 0
+      },
+      {
+        "__type__": "cc.RealKeyframeValue",
+        "interpolationMode": 2,
+        "tangentWeightMode": 3,
+        "value": 0.8888888888888888,
+        "rightTangent": 0.4694444444444445,
+        "rightTangentWeight": 0.1133033066811193,
+        "leftTangent": 0.4694444444444445,
+        "leftTangentWeight": 0.1117364970108113,
+        "easingMethod": 0
+      },
+      {
+        "__type__": "cc.RealKeyframeValue",
+        "interpolationMode": 2,
+        "tangentWeightMode": 0,
+        "value": 0.825925925925926,
+        "rightTangent": -1.2102102102102104,
+        "rightTangentWeight": 1,
+        "leftTangent": -1.2102102102102104,
+        "leftTangentWeight": 1,
+        "easingMethod": 0
+      }
+    ],
+    "preExtrapolation": 1,
+    "postExtrapolation": 1
   },
   {
     "__type__": "cc.CurveRange",
@@ -453,16 +475,16 @@
     "__type__": "cc.VelocityOvertimeModule",
     "_enable": false,
     "x": {
-      "__id__": 33
-    },
-    "y": {
       "__id__": 34
     },
-    "z": {
+    "y": {
       "__id__": 35
     },
-    "speedModifier": {
+    "z": {
       "__id__": 36
+    },
+    "speedModifier": {
+      "__id__": 37
     },
     "space": 1
   },
@@ -494,13 +516,13 @@
     "__type__": "cc.ForceOvertimeModule",
     "_enable": false,
     "x": {
-      "__id__": 38
-    },
-    "y": {
       "__id__": 39
     },
-    "z": {
+    "y": {
       "__id__": 40
+    },
+    "z": {
+      "__id__": 41
     },
     "space": 1
   },
@@ -526,16 +548,16 @@
     "__type__": "cc.LimitVelocityOvertimeModule",
     "_enable": true,
     "limitX": {
-      "__id__": 42
-    },
-    "limitY": {
       "__id__": 43
     },
-    "limitZ": {
+    "limitY": {
       "__id__": 44
     },
-    "limit": {
+    "limitZ": {
       "__id__": 45
+    },
+    "limit": {
+      "__id__": 46
     },
     "dampen": 0.2,
     "separateAxes": false,
@@ -562,7 +584,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 1.5,
+    "constant": 1,
     "multiplier": 1
   },
   {
@@ -570,13 +592,13 @@
     "_enable": false,
     "_separateAxes": false,
     "x": {
-      "__id__": 47
-    },
-    "y": {
       "__id__": 48
     },
-    "z": {
+    "y": {
       "__id__": 49
+    },
+    "z": {
+      "__id__": 50
     }
   },
   {
@@ -607,10 +629,10 @@
     "_mode": 0,
     "animation": 0,
     "frameOverTime": {
-      "__id__": 51
+      "__id__": 52
     },
     "startFrame": {
-      "__id__": 52
+      "__id__": 53
     },
     "cycleCount": 0,
     "_flipU": 0,
@@ -636,21 +658,21 @@
     "_enable": false,
     "mode": 0,
     "lifeTime": {
-      "__id__": 54
+      "__id__": 55
     },
     "_minParticleDistance": 0.1,
     "existWithParticles": true,
     "textureMode": 0,
     "widthFromParticle": true,
     "widthRatio": {
-      "__id__": 55
+      "__id__": 56
     },
     "colorFromParticle": false,
     "colorOverTrail": {
-      "__id__": 56
+      "__id__": 57
     },
     "colorOvertime": {
-      "__id__": 57
+      "__id__": 58
     },
     "_space": 0,
     "_particleSystem": {
@@ -660,7 +682,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 1,
+    "constant": 0,
     "multiplier": 1
   },
   {
@@ -697,18 +719,29 @@
     "_velocityScale": 1,
     "_lengthScale": 1,
     "_mesh": null,
+    "_mainTexture": {
+      "__uuid__": "2c76acfe-7894-4c5c-8dbb-4f2a6e73cd7f@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    },
     "_useGPU": false
   },
   {
-    "__type__": "30e6ans+w9BR531aZJP3Yb6",
+    "__type__": "ddca3kbHOFLFLhQnyaV2ydI",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
+    "__prefab": {
+      "__id__": 61
+    },
     "destroyTime": 1,
     "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "3cSIkaizxIwL0QDLfjHeBn"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -718,11 +751,6 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "71S+a/XxhJeKv/cBv8HfG9",
-    "sync": false,
-    "_synced": {
-      "default": false,
-      "serializable": false
-    }
+    "fileId": "71S+a/XxhJeKv/cBv8HfG9"
   }
 ]
