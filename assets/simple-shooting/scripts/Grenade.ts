@@ -29,7 +29,7 @@ export class Grenade extends Component {
     private _collider: ColliderComponent = null;
     private _rigidBody: RigidBodyComponent = null;
     private _flyTime: number = 0;
-    private _autoDestoryTime: number = 0;
+    private _autoDestoryTime: number = 3;
     private _explosionForce = 100;
     private _explosionRadius = 10;
 
