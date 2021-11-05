@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, AnimationComponent, systemEvent, SystemEvent, KeyCode, Vec3, math, game, Quat, CCFloat, Prefab, director, instantiate, Scene, EventMouse } from 'cc';
+import { _decorator, Component, Node, AnimationComponent, systemEvent, SystemEvent, KeyCode, Vec3, math, game, Quat, CCFloat, Prefab, director, instantiate, Scene, EventMouse, AnimationClip } from 'cc';
 import { Bullet} from './Bullet';
 import { ActionType } from './GameDefines';
 import { Grenade } from './Grenade';
@@ -83,10 +83,10 @@ export class ShootingPlayerController extends Component {
         // 触摸监听
         systemEvent.on(SystemEvent.EventType.TOUCH_MOVE, this.onTouchMove, this);
 
-        this._animStateToNameMap[PlayerAnimState.Idle] = 'Idle';
-        this._animStateToNameMap[PlayerAnimState.Running] = 'Run';
-        this._animStateToNameMap[PlayerAnimState.Jumping] = 'Jump';
-        this._animStateToNameMap[PlayerAnimState.Shooting] = 'ShootTorsoArmsRifle';
+        this._animStateToNameMap[PlayerAnimState.Idle] = 'Ar|Idle';
+        this._animStateToNameMap[PlayerAnimState.Running] = 'Ar|Run';
+        this._animStateToNameMap[PlayerAnimState.Jumping] = 'Ar|Jump';
+        this._animStateToNameMap[PlayerAnimState.Shooting] = 'Ar|ShootTorsoArmsRifle';
 
         this._moveDirMap[MoveDir.Left] = new Vec3(1, 0, 0);
         this._moveDirMap[MoveDir.Right] = new Vec3(-1, 0, 0);
@@ -95,8 +95,9 @@ export class ShootingPlayerController extends Component {
     }
 
     start () {
-        this._animComp = this.node.getComponent(AnimationComponent);
-        this._animComp.on(AnimationComponent.EventType.FINISHED, this.onAnimationEnd, this);
+        const rootNode = this.node.getChildByName('RootNode')
+        this._animComp = rootNode.getComponent(AnimationComponent);
+        this._animComp.on(AnimationComponent.EventType.LASTFRAME, this.onAnimationEnd, this)
         this.changeToAnimState(PlayerAnimState.Idle);
     }
 
@@ -274,6 +275,7 @@ export class ShootingPlayerController extends Component {
     }
 
     onAnimationEnd(type, state) {
+        console.log(state.name)
         if (state.name === this._animStateToNameMap[PlayerAnimState.Shooting]) {
             this.changeToAnimState(PlayerAnimState.Idle)
         }
