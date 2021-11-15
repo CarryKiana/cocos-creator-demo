@@ -1,0 +1,58 @@
+{
+  "ver": "2.1.4",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "b8697139-f2a2-4f06-abbf-114e2bbfb3ac",
+  "files": [],
+  "subMetas": {
+    "72704": {
+      "importer": "gltf-mesh",
+      "uuid": "b8697139-f2a2-4f06-abbf-114e2bbfb3ac@72704",
+      "displayName": "",
+      "id": "72704",
+      "name": "cocosfinish_02.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "28c31": {
+      "importer": "gltf-scene",
+      "uuid": "b8697139-f2a2-4f06-abbf-114e2bbfb3ac@28c31",
+      "displayName": "",
+      "id": "28c31",
+      "name": "cocos_mesh_helmet.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "b8697139-f2a2-4f06-abbf-114e2bbfb3ac@28c31",
+    "assetFinder": {
+      "meshes": [
+        "b8697139-f2a2-4f06-abbf-114e2bbfb3ac@72704"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "b8697139-f2a2-4f06-abbf-114e2bbfb3ac@28c31"
+      ]
+    }
+  }
+}

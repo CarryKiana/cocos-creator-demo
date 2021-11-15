@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.4",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "c7f352bc-f3af-400b-85ff-b98fdf68438f",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "ab65f": {
+      "importer": "gltf-animation",
+      "uuid": "c7f352bc-f3af-400b-85ff-b98fdf68438f@ab65f",
+      "displayName": "",
+      "id": "ab65f",
+      "name": "cocos_anim_idle.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 3.000000238418579
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "0ea50": {
+      "importer": "gltf-scene",
+      "uuid": "c7f352bc-f3af-400b-85ff-b98fdf68438f@0ea50",
+      "displayName": "",
+      "id": "0ea50",
+      "name": "cocos_anim_idle.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "cocos_anim_idle",
+        "duration": 3.000000238418579,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "cocos_anim_idle",
+            "from": 0,
+            "to": 3.000000238418579,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "c7f352bc-f3af-400b-85ff-b98fdf68438f@0ea50",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "c7f352bc-f3af-400b-85ff-b98fdf68438f@0ea50"
+      ]
+    }
+  }
+}
