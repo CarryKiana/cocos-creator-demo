@@ -93,9 +93,7 @@ export class PlayerController extends Component {
     onGamePlaying () {
         this._moveState = MoveState.RUNNING;
         this.playerAnimComp.play(cocosAnim.run);
-
-        const jumpState = this.playerAnimComp.getState(cocosAnim.jump);
-        jumpState.on(AnimationComponent.EventType.FINISHED, this.onJumpEnd, this);
+        this.playerAnimComp.on(AnimationComponent.EventType.FINISHED, this.onAnimationEnd, this)
 
         systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onViewTouchStart, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onViewTouchEnd, this);
@@ -104,8 +102,18 @@ export class PlayerController extends Component {
     }
 
     onGameEnd () {
-        const jumpState = this.playerAnimComp.getComponent(cocosAnim.jump);
-        // todo
+        this.playerAnimComp.off(AnimationComponent.EventType.FINISHED, this.onAnimationEnd, this)
+
+        systemEvent.off(SystemEvent.EventType.TOUCH_START, this.onViewTouchStart, this);
+        systemEvent.off(SystemEvent.EventType.TOUCH_END, this.onViewTouchEnd, this);
+
+        this.bindCollider(false)
+    }
+
+    onAnimationEnd (type, state) {
+        if (state.name === cocosAnim.jump) {
+            this.onJumpEnd(type, state)
+        }
     }
 
     bindCollider(flag: Boolean) {
@@ -119,21 +127,120 @@ export class PlayerController extends Component {
         }
     }
 
-    onTriggerEnter (event: ITriggerEvent) {}
-
-    onViewTouchStart (event: Touch) {}
-
-    onViewTouchEnd (event: Touch) {}
-
-    move (moveAction: MoveAction) {}
-
-    onJumpEnd (type, state) {}
-
-    update (deltaTime: number) {
-        // [4]
+    onTriggerEnter (event: ITriggerEvent) {
+        const triggerNode:Node = event.otherCollider.node;
+        if (triggerNode.name === 'Coin') {
+            this._audioSourceComp.playOneShot(this.coinAC);
+            if (this.onTriggerCoin) {
+                this.onTriggerCoin(triggerNode);
+            }
+        } else if (triggerNode.name === 'RoadBlock') {
+            const animComp = triggerNode.getComponent(AnimationComponent);
+            const downName = 'block_down';
+            const state = animComp.getState(downName);
+            if (!state.isPlaying) {
+                animComp.play(downName);
+            }
+            if (this.onTriggerBlock) {
+                this.onTriggerBlock(triggerNode);
+            }
+        }
     }
 
-    onDestroy () {}
+    onViewTouchStart (event: Touch) {
+        let location = event.getLocation();
+        this._pressedX = location.x;
+        this._pressedY = location.y;
+    }
+
+    onViewTouchEnd (event: Touch) {
+        let touchPoint = event.getLocation();
+        let endX = this._pressedX - touchPoint.x;
+        let endY = this._pressedY - touchPoint.y;
+
+        // 人物旋转180度面朝里，此时向左为x周正方向
+        // 判断横纵轴哪个跨度大，以跨度大的为准
+        if (Math.abs(endX) > Math.abs(endY)) {
+            // 手势向左右
+            if (endX > 0) {
+                // 左
+                this.move(MoveAction.LEFT);
+            } else {
+                // 右
+                this.move(MoveAction.RIGHT);
+            }
+        } else {
+            // 手势向上下
+            if (endY > 0) {
+                // down
+            } else {
+                this.move(MoveAction.UP)
+            }
+        }
+    }
+
+    move (moveAction: MoveAction) {
+        switch (moveAction) {
+            case MoveAction.LEFT:
+                if (this._moveState === MoveState.RUNNING) {
+                    tween(this.node)
+                        .by(0.5, { position: new Vec3(GameDefines.leftLineX, 0, 0) }, { onComplete: () => {
+                            this._moveState = MoveState.RUNNING;
+                        }})
+                        .start();
+                    this._moveState = MoveState.MOVING_LEFT;
+                }
+                break;
+            case MoveAction.RIGHT:
+                if (this._moveState === MoveState.RUNNING) {
+                    tween(this.node)
+                        .by(0.5, { position: new Vec3(GameDefines.rightLineX, 0, 0) }, { onComplete: () => {
+                            this._moveState = MoveState.RUNNING;
+                        }})
+                        .start();
+                    this._moveState = MoveState.MOVING_RIGHT;
+                }
+                break;
+            case MoveAction.UP:
+                if (this._moveState === MoveState.RUNNING) {
+                    this._audioSourceComp.playOneShot(this.jumpAC);
+                    this.playerAnimComp.crossFade(cocosAnim.jump);
+                    const state = this.playerAnimComp.getState(cocosAnim.jump);
+                    state.speed = 1.5;
+                    tween(this.node)
+                        .by(0.75, { position: new Vec3(0, 0, 10) }, { onComplete: () => {
+                            // 已在跳跃动画监听处理
+                        }})
+                        .start();
+                    this._moveState = MoveState.JUMPING;
+                    this.bindCollider(false);
+                }
+                break;
+        }
+    }
+
+    onJumpEnd (type, state) {
+        if (state?.name === cocosAnim.jump) {
+            this.playerAnimComp.play(cocosAnim.run);
+            this._moveState = MoveState.RUNNING;
+            this.bindCollider(true);
+        }
+    }
+
+    update (deltaTime: number) {
+        if (this._gameState === GameState.PLAYING) {
+            if (this._moveState === MoveState.JUMPING) {
+                // this.node.translate(tempVec3_a.set(0, 0, this.speed * 1.5 * deltaTime));
+            } else {
+                this.node.translate(tempVec3_a.set(0, 0, this.speed * deltaTime));
+            }
+        }
+    }
+
+    onDestroy () {
+        systemEvent.off(SystemEvent.EventType.TOUCH_START, this.onViewTouchStart, this);
+        systemEvent.off(SystemEvent.EventType.TOUCH_END, this.onViewTouchEnd, this);
+    }
 }
 
 /**
