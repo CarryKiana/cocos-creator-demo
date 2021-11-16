@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Node, ColliderComponent, ITriggerEvent } from 'cc';
+import { PlayerController } from './PlayerController';
 const { ccclass, property } = _decorator;
 
 /**
@@ -22,9 +23,18 @@ export class ColliderChecker extends Component {
     // [2]
     // @property
     // serializableDummy = 0;
+    @property({ type: PlayerController })
+    public playerCtrl: PlayerController = null;
 
     start () {
-        // [3]
+        const collider = this.getComponent(ColliderComponent);
+        collider.on('onCollisionEnter', this.onTriggerEnter, this)
+    }
+
+    onTriggerEnter (event: ITriggerEvent) {
+        if (this.playerCtrl) {
+            this.playerCtrl.onTriggerEnter(event);
+        }
     }
 
     // update (deltaTime: number) {
