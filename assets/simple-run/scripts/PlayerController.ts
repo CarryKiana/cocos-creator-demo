@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, SkeletalAnimationComponent, Vec3, CCFloat, systemEvent, SystemEvent, tween, AnimationComponent, Touch, ColliderComponent, ITriggerEvent, AudioClip, AudioSource } from 'cc';
+import { _decorator, Component, Node, SkeletalAnimationComponent, SkeletalAnimation, Vec3, CCFloat, systemEvent, SystemEvent, tween, AnimationComponent, Touch, ColliderComponent, ITriggerEvent, AudioClip, AudioSource } from 'cc';
 import { GameDefines, GameState } from './GameDefines'
 const { ccclass, property } = _decorator;
 
@@ -86,6 +86,7 @@ export class PlayerController extends Component {
     }
 
     onGameInit () {
+        console.log(this)
         this.playerAnimComp.play(cocosAnim.idle);
         this.node.setPosition(tempVec3_a.set(0, 0 , 0));
     }
@@ -93,7 +94,8 @@ export class PlayerController extends Component {
     onGamePlaying () {
         this._moveState = MoveState.RUNNING;
         this.playerAnimComp.play(cocosAnim.run);
-        this.playerAnimComp.on(AnimationComponent.EventType.FINISHED, this.onAnimationEnd, this)
+        console.log(this.playerAnimComp)
+        this.playerAnimComp.on(AnimationComponent.EventType.LASTFRAME, this.onAnimationEnd, this)
 
         systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onViewTouchStart, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onViewTouchEnd, this);
@@ -102,7 +104,7 @@ export class PlayerController extends Component {
     }
 
     onGameEnd () {
-        this.playerAnimComp.off(AnimationComponent.EventType.FINISHED, this.onAnimationEnd, this)
+        this.playerAnimComp.off(AnimationComponent.EventType.LASTFRAME, this.onAnimationEnd, this)
 
         systemEvent.off(SystemEvent.EventType.TOUCH_START, this.onViewTouchStart, this);
         systemEvent.off(SystemEvent.EventType.TOUCH_END, this.onViewTouchEnd, this);

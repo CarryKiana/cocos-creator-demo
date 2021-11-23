@@ -111,6 +111,7 @@ export class GameManager extends Component {
             }
             this.generateFloor(tempVec3_a.set(0, 0, posZ), needItem);
         }
+        console.log(this)
     }
 
     destroyFloor (floorNode: Node) {
